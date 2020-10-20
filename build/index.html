@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Send Mail</title>
+  <script src=
+    "http://localhost:5000/sendMail.js">
+  </script>
+
+  <script type="text/javascript">
+//   var nodemailer = require("nodemailer");
+//   function sendEmail() {
+// var transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     user: "sangharshxerox@gmail.com",
+//     pass: "8149137181"
+//   }
+// });
+//
+// var mailOptions = {
+//   from: "sangharshxerox@gmail.com",
+//   to: "sangharsh1008@gmail.com",
+//   subject: "Sending Email using Node.js",
+//   text: `Hi Sangharsh, thank you for your nice Node.js tutorials.
+//           I will donate 50$ for this course. Please send me payment options.`
+//   // html: '<h1>Hi Smartherd</h1><p>Your Messsage</p>'
+// };
+//
+// transporter.sendMail(mailOptions, function(error, info) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("Email sent: " + info.response);
+//   }
+// });
+// }
+
+    function sendEmail() {
+    //   Email.send({
+    //     Host: "smtp.gmail.com",
+    //     Username: "sangharshxerox@gmail.com",
+    //     Password: "8149137181",
+    //     To: 'sangharsh1008@gmail.com',
+    //     From: "sammeksovitkar@gmail.com",
+    //     Subject: "Sending Email using javascript",
+    //     Body: "Well that was easy!!",
+    //   })
+    //     .then(function (message,err) {
+    //       console.log(message,'sangharsh',err);
+    //       alert("mail sent successfully")
+    //     });
+
+    fetch('http://localhost:8080/sendMail')
+  }
+  </script>
+</head>
+
+<body>
+  <form method="post">
+    <input type="button" value="Send Email"
+        onclick="sendEmail()" />
+  </form>
+</body>
+
+</html>
